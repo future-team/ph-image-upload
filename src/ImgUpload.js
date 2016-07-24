@@ -68,6 +68,12 @@ export default class ImgUpload extends Component{
                 let xhr = new XMLHttpRequest();
                 if(xhr.upload){
                     xhr.onreadystatechange=(e)=>{
+                        if(i==fileList.length-1){
+                            this.setState({
+                                uploading:false
+                            })
+                            _this.refs.fileInput.value='';
+                        }
                         if(xhr.readyState == 4){
                             if(xhr.status == 200){
                                 //成功回调
@@ -77,7 +83,6 @@ export default class ImgUpload extends Component{
                                     _this.props.failCallback(file,xhr.responseText );
                                 }else{
                                     uploadInfo[file.name] = JSON.parse(xhr.responseText ||'{}');
-                                    console.log('success',uploadInfo);
                                 }
 
                                 success+=1;
@@ -106,7 +111,7 @@ export default class ImgUpload extends Component{
         return(
             <span className='img-upload'>
                 <label >
-                    <input  type='file' onChange={::this.getFiles} multiple={this.props.multiple?true:false} />
+                    <input  ref='fileInput' type='file' onChange={::this.getFiles} multiple={this.props.multiple?true:false} />
                 </label>
             </span>
         )
