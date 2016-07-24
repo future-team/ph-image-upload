@@ -1,0 +1,1 @@
+export ImgUpload from './ImgUpload';
