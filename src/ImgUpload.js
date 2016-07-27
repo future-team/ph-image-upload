@@ -108,14 +108,17 @@ export default class ImgUpload extends Component{
 
 
     render(){
+        let disabled=this.props.disabled||this.state.uploading;
         return(
-            <span className={'img-upload '+(this.props.className?this.props.className:'')}>
+            <span className={'img-upload '+
+            (this.props.className?this.props.className:'')+
+            (disabled?' disabled':'')}>
                 {this.props.children?
                     this.props.children:
                     <label className='default-upload-theme'>
                     </label>
                 }
-                <input  ref='fileInput' type='file' onChange={::this.getFiles} multiple={this.props.multiple?true:false} />
+                <input disabled={disabled}  ref='fileInput' type='file' onChange={::this.getFiles} multiple={this.props.multiple?true:false} />
             </span>
         )
     }

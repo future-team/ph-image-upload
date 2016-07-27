@@ -1,6 +1,6 @@
 {
   "name": "ph-image-upload",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "trade f2e project",
   "repository": {
     "type": "git",
@@ -60,7 +60,8 @@
     "test": "karma start",
     "demo": "node_modules/.bin/gulp demo",
     "doc": "smartDoc ||node_modules/.bin/smartDoc",
-    "start": "npm run demo"
+    "start": "npm run demo",
+    "prepublish":"npm run build"
   },
   "bugs": {
     "url": "http:///issues"
