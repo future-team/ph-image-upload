@@ -1,6 +1,6 @@
 {
   "name": "ph-image-upload",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "trade f2e project",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
   "keywords": [
     "trade-static"
   ],
+  "main":"lib/",
   "dependencies": {
     "extend": "^3.0.0",
     "classnames": "^2.1.3",
