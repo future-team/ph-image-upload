@@ -33,11 +33,16 @@ class Demo extends Component{
         return (
             <div>
                 <ImgUpload multiple
+                           className='my-class'
                            filter={::this.filter}
                            successCallback={::this.successCallback}
                            failCallback={::this.failCallback}
                            completeCallback={::this.completeCallback}
-                           uploadUrl="http://beta.ask.sankuai.com/attachment/upload" maxNumber={5} />
+                           uploadUrl="http://beta.ask.sankuai.com/attachment/upload" >
+                    <label style={{display:'inline-block',width:'100px',height:'100px'}}>
+                        这是一个上传按钮
+                    </label>
+                </ImgUpload>
             </div>
         )
     }

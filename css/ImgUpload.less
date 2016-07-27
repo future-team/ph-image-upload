@@ -1,14 +1,6 @@
 .img-upload{
     display: inline-block;
-    label{
-        position: relative;
-        background-image:url(./upload.png);
-        background-size: 60px 60px;
-        border:1px dashed #cdcdcd;
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-    }
+    position: relative;
     input[type="file"]{
         width: 100%;
         position: absolute;
@@ -17,5 +9,18 @@
         top: 0;
         opacity: 0;
         cursor: pointer;
+        z-index: 10;
+    }
+    label.default-upload-theme{
+        position: relative;
+        background-image:url(./upload.png);
+        background-size: 28px 25px;
+        background-position: 21px 22.5px;
+        background-repeat: no-repeat;
+        border:1px dashed #cccccc;
+        display: inline-block;
+        background-color: #f3f3f7;
+        width: 70px;
+        height: 70px;
     }
 }

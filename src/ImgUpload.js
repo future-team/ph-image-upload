@@ -109,10 +109,13 @@ export default class ImgUpload extends Component{
 
     render(){
         return(
-            <span className='img-upload'>
-                <label >
-                    <input  ref='fileInput' type='file' onChange={::this.getFiles} multiple={this.props.multiple?true:false} />
-                </label>
+            <span className={'img-upload '+(this.props.className?this.props.className:'')}>
+                {this.props.children?
+                    this.props.children:
+                    <label className='default-upload-theme'>
+                    </label>
+                }
+                <input  ref='fileInput' type='file' onChange={::this.getFiles} multiple={this.props.multiple?true:false} />
             </span>
         )
     }
