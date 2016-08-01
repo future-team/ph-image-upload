@@ -108,6 +108,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            successCallback: function successCallback() {
 	                return true;
 	            },
+	            selectedCallback: function selectedCallback(num) {
+	                return num;
+	            },
 	            filter: function filter(files, maxSize) {
 	                var arrFiles = [];
 	                for (var i = 0, file; file = files[i]; i++) {
@@ -150,11 +153,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.target = e.target;
 	        var filteredFiles = this.props.filter(files, this.props.maxSize);
 	        if (filteredFiles && filteredFiles.length && filteredFiles.length > 0) {
+	            this.props.selectedCallback(filteredFiles.length);
 	            for (var i = 0, file; file = filteredFiles[i]; i++) {
 	                //增加唯一索引值
 	                file.index = i;
 	            }
 	            this.upload(filteredFiles);
+	        } else {
+	            this.props.selectedCallback(0);
 	        }
 	    };
 
@@ -217,11 +223,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    ImgUpload.prototype.render = function render() {
+	        var disabled = this.props.disabled || this.state.uploading;
 	        return _react2['default'].createElement(
 	            'span',
-	            { className: 'img-upload ' + (this.props.className ? this.props.className : '') },
+	            { className: 'img-upload ' + (this.props.className ? this.props.className : '') + (disabled ? ' disabled' : '') },
 	            this.props.children ? this.props.children : _react2['default'].createElement('label', { className: 'default-upload-theme' }),
-	            _react2['default'].createElement('input', { ref: 'fileInput', type: 'file', onChange: this.getFiles.bind(this), multiple: this.props.multiple ? true : false })
+	            _react2['default'].createElement('input', { disabled: disabled, ref: 'fileInput', type: 'file', onChange: this.getFiles.bind(this), multiple: this.props.multiple ? true : false })
 	        );
 	    };
 

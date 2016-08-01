@@ -8,6 +8,7 @@ export default class ImgUpload extends Component{
         completeCallback:()=>{},
         failCallback:()=>{},
         successCallback:()=>{return true},
+        selectedCallback:(num)=>{return num},
         filter:(files,maxSize)=>{
             var arrFiles = [];
             for (var i = 0, file; file = files[i]; i++) {
@@ -45,11 +46,14 @@ export default class ImgUpload extends Component{
         this.target = e.target;
         let filteredFiles = this.props.filter(files,this.props.maxSize);
         if(filteredFiles && filteredFiles.length && filteredFiles.length >0){
+            this.props.selectedCallback(filteredFiles.length);
             for (var i = 0, file; file = filteredFiles[i]; i++) {
                 //增加唯一索引值
                 file.index = i;
             }
             this.upload(filteredFiles);
+        }else{
+            this.props.selectedCallback(0);
         }
 
     }
