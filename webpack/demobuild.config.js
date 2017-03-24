@@ -25,8 +25,6 @@ module.exports =extend({}, {
     //entry:baseFileDir+'src/index.js',
     devtool:'eval',
     entry:[
-        'webpack-dev-server/client?http://localhost:8081',
-        'webpack/hot/only-dev-server',
         './example/src/index.js'
     ],
     output:{
@@ -63,27 +61,6 @@ module.exports =extend({}, {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     ]
 });
-/*
- module:{
- module:{
- loaders:[
- {
- test: /\.js$/,
- loader: 'babel',
- exclude: /node_modules/
- },
- {
- test: /\.less$/,
- loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
- }
- ]
- }
- },
- plugins: [
- new ExtractTextPlugin(path.join('example.css'))
- ]
- */

@@ -222,6 +222,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 
+	    ImgUpload.prototype.chooseFile = function chooseFile() {
+	        this.refs.fileInput.click();
+	    };
+
 	    ImgUpload.prototype.render = function render() {
 	        var disabled = this.props.disabled || this.state.uploading;
 	        return _react2['default'].createElement(
@@ -260,8 +264,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./ImgUpload.less", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./ImgUpload.less");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/less-loader/index.js!./ImgUpload.less", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/less-loader/index.js!./ImgUpload.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

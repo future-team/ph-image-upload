@@ -4,6 +4,7 @@ var webpack = require('webpack');
 var Server = require('karma').Server;
 var demoWebpackConfig = require('./webpack/demo.config');
 var webpackConfig = require('./webpack/webpack.config');
+var demoBuildConfig = require('./webpack/demobuild.config');
 var WebpackDevServer = require("webpack-dev-server");
 var open = require('gulp-open');
 
@@ -90,3 +91,13 @@ gulp.task('default', ['babel','require-webpack'/*, 'html', 'asset'*/]);
 gulp.task('test',['karma']);
 gulp.task('demo', ['demo-webpack','open']);
 gulp.task('min',['min-webpack']);
+gulp.task('demobuild', function(done){
+  var wbpk = Object.create(demoBuildConfig);
+  webpack(wbpk).run(function(err, stats) {
+    if(err) throw new gutil.PluginError("min-webpack", err);
+    gutil.log("[webpack]", stats.toString({
+      // output options
+    }));
+    done();
+  });
+});

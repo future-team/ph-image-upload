@@ -110,7 +110,9 @@ export default class ImgUpload extends Component{
         }
     }
 
-
+    chooseFile(){
+        this.refs.fileInput.click();
+    }
     render(){
         let disabled=this.props.disabled||this.state.uploading;
         return(

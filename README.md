@@ -1,6 +1,10 @@
 # ph-image-upload
 
 upload image or other file
+
+demo地址 [https://future-team.github.io/ph-image-upload/example/index.html](https://future-team.github.io/ph-image-upload/example/index.html)
+
+
 ```jsx
  <ImgUpload multiple
             className='my-class'
@@ -53,7 +57,7 @@ View [example](/example/src/index.js) to get more details
 - filter: 用于过滤用户选择的文件
 - uploadUrl: 上传地址
 - disabled: 是否禁止上传
-
+- chooseFile方法 通过给ImgUpload添加ref的形式，可以通过chooseFile方法来手动触发上传图片
 
 ### Contributing
 
