@@ -173,6 +173,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            uploading: true
 	        });
 	        var uploadInfo = {};
+	        var beforeUploadCallback = this.props.beforeUploadCallback;
 
 	        var _loop = function (i, file) {
 
@@ -212,6 +213,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    xhr.setRequestHeader('X_FILENAME', encodeURIComponent(file.name));
 	                    var f = new FormData();
 	                    f.append(file.name, file);
+	                    beforeUploadCallback && beforeUploadCallback(file);
 	                    xhr.send(f);
 	                }
 	            })(file);
@@ -283,7 +285,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".img-upload {\n  display: inline-block;\n  position: relative;\n}\n.img-upload input[type=\"file\"] {\n  width: 100%;\n  position: absolute;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  cursor: pointer;\n  z-index: 10;\n}\n.img-upload label.default-upload-theme {\n  position: relative;\n  background-image: url(" + __webpack_require__(7) + ");\n  background-size: 28px 25px;\n  background-position: 21px 22.5px;\n  background-repeat: no-repeat;\n  border: 1px dashed #cccccc;\n  display: inline-block;\n  background-color: #f3f3f7;\n  width: 70px;\n  height: 70px;\n}\n", ""]);
+	exports.push([module.id, ".img-upload {\n  display: inline-block;\n  position: relative;\n}\n.img-upload input[type=\"file\"] {\n  width: 100%;\n  position: absolute;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  cursor: pointer;\n}\n.img-upload label.default-upload-theme {\n  position: relative;\n  background-image: url(" + __webpack_require__(7) + ");\n  background-size: 28px 25px;\n  background-position: 21px 22.5px;\n  background-repeat: no-repeat;\n  border: 1px dashed #cccccc;\n  display: inline-block;\n  background-color: #f3f3f7;\n  width: 70px;\n  height: 70px;\n}\n", ""]);
 
 	// exports
 

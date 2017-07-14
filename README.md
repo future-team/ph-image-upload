@@ -53,6 +53,7 @@ View [example](/example/src/index.js) to get more details
 - multiple 用来控制input file 的单选和多选 .
 - successCallback 每当上传成功一个文件，该方法都会被调用.
 - failCallback 每当一个文件上传失败，该方法都会被调用.
+- beforeUploadCallback 当文件开始上传前调用.
 - completeCallback 当所有文件都成功上传后，该方法会被调用.
 - filter: 用于过滤用户选择的文件
 - uploadUrl: 上传地址

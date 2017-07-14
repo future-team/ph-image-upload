@@ -65,7 +65,8 @@ export default class ImgUpload extends Component{
         this.setState({
             uploading:true
         })
-        let uploadInfo={};
+        let uploadInfo={},
+            {beforeUploadCallback}=this.props
         for(let i=0,file=null;file=fileList[i];i++ ){
 
             ((file)=>{
@@ -104,6 +105,7 @@ export default class ImgUpload extends Component{
                     xhr.setRequestHeader('X_FILENAME', encodeURIComponent(file.name));
                     let f = new FormData();
                     f.append(file.name, file);
+                    beforeUploadCallback&&beforeUploadCallback(file)
                     xhr.send(f);
                 }
             })(file);
