@@ -52,14 +52,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(1);
 
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -73,9 +73,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.ImgUpload = _ImgUpload3['default'];
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -244,15 +244,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = ImgUpload;
 	module.exports = exports['default'];
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -276,9 +276,9 @@ return /******/ (function(modules) { // webpackBootstrap
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(6)();
 	// imports
@@ -290,9 +290,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	// exports
 
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -346,15 +346,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAzCAYAAADCQcvdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjAyQUVGMkFDNEI2RjExRTZBNDNFODU0MkNCQkI4MjM0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjAyQUVGMkFENEI2RjExRTZBNDNFODU0MkNCQkI4MjM0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDJBRUYyQUE0QjZGMTFFNkE0M0U4NTQyQ0JCQjgyMzQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDJBRUYyQUI0QjZGMTFFNkE0M0U4NTQyQ0JCQjgyMzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4QzqQmAAAEOElEQVR42uyaW0gUURjHZ20pMU3LLkbZQy5JT92lB82igswUzLLsoeiCol0IK4MwyyKEjB6iKIl6CJKkMig1tJdKH7qR0ZOESXfpQuWtVJDtf9xvafiY3ZnZPTuuix/8cOfMmTPnP+fyne8cbXl5ecoIszXgKrCBXaDOW+YwZeRZJZgO4sAVvcwjUeAs1e9poSjQlI0KHBU4KjD4BIpZ6hRoAX+AM4C0gQwNP/fFyzPcPOXrAOl2VcYxoAwcBOMs+sAJ4DL5NO7n/LUhP2lXiasG2cPQi8YGsoe6u2jpMIn7AXaytELwTULZn8EO0YLxoJjdfAsOgwegy2LRdTorFD4Obd4Ks9OCNVyV1g6SwM9QmUXXsrTiUBHnFjiXpTWGmh8cz9K62XWajl/q0OgFI2olc0nHL8VRABrSSzUrl3wfVL+/y6jYbh2/JPzNdgsFFtKQGfJzepntBgqsNRI5W+wnZ4xGEyZa0KzFghSQTH/jqQd00QqpCTSDx0bGUDAJXAxyQAGI1LgfAxYR+0EPuAhugWcm3rMSXKAAYQ9osKKLloDn4JAHcVoWSfmfgqMm3iXEJQIHhVoBHYMR4C446Wc5J8A9EGUgb6Lqd3wgBUbQjJahce8Vtc5SmvHEUJgEloADdJ/bOvpYE4PF0YsAeTlLE5HIBrAQnKHuJ3zWIPgFXoCzYAFYT5OO2kR5VcEgsIS+uNoaaAK57WHvhNsdyl+vsSdzfDgFJmuMOSEuHfw2WVYnyKSuqbZjYMVwCczU6JabqBv6YuK5LeCNznssERhLfk5t+6gl/LFesJelFchYIob50D0j2WxZJ2m4NJIvdZvYuky1WmAKu74ueWVVpfFBLW9BtTVLFvhI54MGXOBMdv1JssA2du2wWuBUdv1VssBujfWq3wJ7WVqUiQpMkCyQv7tH536vEYGtLG21l/zt7Hq2ZIEOnS7L69ZqRCBfKlXQwljLmth1qmSBqV7eNxmcZvfrjQgUMVUfaxURgGZrdAk+a+ZKFpir8b4oWpg/UVzHbW7rMxIPijDmI7WaOuhMoEhbz0TUIDaG70sQt0pxnYnwiMWTVVDdDc2i4uCzxseKnQPREgLn8yby11CdDbuJQdpPEUfXAz5MDDdoj8QXE89dY5G6JxugOuYYXdyHsVW9iPPmgHLwGvQbrKSI4W764Lci6ON4O3ztp7qU00coMRO5aDn69+AImKe4zg1tHqhlz2XR4jtL0TmUVOVvoR0AHluq3xNOdRF1emfllsVm8JClJdD4eAmKFNdWYgzdi6ZJqYi2Lmqot6hNlLdV5rTsz76oWEVspPGTxu7NJ8yYaLltipzzeSktKEz8E4E4Gyz1s5wyGsey17aKzel0SikoPz8/icZTgcHJ5q/i2tmuVjzsbFdWVgaPQJXQKfizTPl/NuGg8ddJa1n32YQYb17PJmQI/CfAADO99IL3jN5GAAAAAElFTkSuQmCC"
 
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -577,7 +577,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 
-/***/ }
+/***/ })
 /******/ ])
 });
 ;
