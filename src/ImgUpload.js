@@ -65,7 +65,7 @@ export default class ImgUpload extends Component{
         this.setState({
             uploading:true
         })
-        let uploadInfo={},
+        let uploadInfo=[],
             {beforeUploadCallback}=this.props
         for(let i=0,file=null;file=fileList[i];i++ ){
 
@@ -87,7 +87,7 @@ export default class ImgUpload extends Component{
                                 if(typeof(isUpload)=='boolean'&& !isUpload){
                                     _this.props.failCallback(file,xhr.responseText );
                                 }else{
-                                    uploadInfo[file.name] = JSON.parse(xhr.responseText ||'{}');
+                                    uploadInfo.push(JSON.parse(xhr.responseText ||'{}'));
                                 }
 
                                 success+=1;
