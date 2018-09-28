@@ -38,7 +38,7 @@ export default class ImgUpload extends Component{
     getFiles(e){
         //e.stopPropagation();
         //e.preventDefault();
-
+        
         if(this.props.disabled||this.state.uploading){
             return
         }
@@ -55,7 +55,7 @@ export default class ImgUpload extends Component{
         }else{
             this.props.selectedCallback(0);
         }
-
+        this.refs.fileInput.value = ''
     }
 
 
