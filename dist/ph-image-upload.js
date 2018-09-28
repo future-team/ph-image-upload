@@ -145,6 +145,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ImgUpload.prototype.getFiles = function getFiles(e) {
 	        //e.stopPropagation();
 	        //e.preventDefault();
+	        console.log('onchange---');
 
 	        if (this.props.disabled || this.state.uploading) {
 	            return;
@@ -162,6 +163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else {
 	            this.props.selectedCallback(0);
 	        }
+	        this.refs.fileInput.value = '';
 	    };
 
 	    ImgUpload.prototype.upload = function upload(fileList) {
@@ -172,7 +174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setState({
 	            uploading: true
 	        });
-	        var uploadInfo = {};
+	        var uploadInfo = [];
 	        var beforeUploadCallback = this.props.beforeUploadCallback;
 
 	        var _loop = function (i, file) {
@@ -195,7 +197,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                if (typeof isUpload == 'boolean' && !isUpload) {
 	                                    _this.props.failCallback(file, xhr.responseText);
 	                                } else {
-	                                    uploadInfo[file.name] = JSON.parse(xhr.responseText || '{}');
+	                                    uploadInfo.push(JSON.parse(xhr.responseText || '{}'));
 	                                }
 
 	                                success += 1;
@@ -266,8 +268,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/less-loader/index.js!./ImgUpload.less", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/less-loader/index.js!./ImgUpload.less");
+			module.hot.accept("!!../node_modules/_css-loader@0.17.0@css-loader/index.js!../node_modules/_less-loader@2.2.3@less-loader/index.js!./ImgUpload.less", function() {
+				var newContent = require("!!../node_modules/_css-loader@0.17.0@css-loader/index.js!../node_modules/_less-loader@2.2.3@less-loader/index.js!./ImgUpload.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
